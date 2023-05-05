@@ -139,6 +139,8 @@ header {
   align-items: center;
 }
 .header-link i {
+  text-decoration: none;
+  color: #000000;
   font-size: 1.3rem;
 }
 h1 {
