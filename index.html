@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holy Grail Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-reveal">
+      <div class="element-3 element"></div>
+      <div class="element-1 element"></div>
+      <div class="element-2 element"></div>
+    </div>
+    <div class="outer-grid">
+      <header>
+        <div class="left-header">
+          <i class="fa-solid fa-bars" onclick="toggleNav()"></i>
+          <a href="#home"
+            ><img class="logo" src="assets/logo-web.png" alt="logo"
+          /></a>
+        </div>
+        <div class="right-header">
+          <div class="header-link">
+            <a href="http://github.com/ShantMelikyan" class="no-color-change"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <div class="header-link">
+            <a
+              href="https://www.linkedin.com/in/shant-melikyan-2244771b3/"
+              class="no-color-change"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+      <nav class="hide-nav">
+        <div class="nav-link">
+          <a href="#about" class="icon-link">
+            <i class="fa-regular fa-address-card"></i>
+            <span class="icon-text">About</span>
+          </a>
+          <a href="#work" class="icon-link">
+            <i class="fa-solid fa-briefcase"></i>
+            <span class="icon-text">Work</span>
+          </a>
+          <a href="#contact" class="icon-link">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="icon-text">Contact</span>
+          </a>
+          <a href="#projects" class="icon-link">
+            <i class="fa-solid fa-code"></i>
+            <span class="icon-text">Projects</span>
+          </a>
+        </div>
+      </nav>
+      <div class="inner-grid">
+        <main>
+          <section id="home">
+            <div class="fadeup-enter">
+              <h1>Hi, my name is</h1>
+              <h2 class="big-heading">Shant Melikyan.</h2>
+              <h3 class="big-heading">
+                I build digital experiences for the web.
+              </h3>
+              <p>
+                I&rsquo;m a Software Developer specializing in building
+                websites. Currently, I&rsquo;m focused on building responsive
+                and accessible applications from simple landing pages to
+                full-fledged web apps.
+              </p>
+            </div>
+          </section>
+          <section id="about">
+            <h2 class="section-header">About Me</h2>
+            <div class="about-me">
+              <p>
+                Hi there! I'm a freelance Web Developer with a strong background
+                in Computer Science and a passion for creating beautiful and
+                functional websites. I specialize in front-end development using
+                HTML, CSS, and JavaScript, and have experience with React and
+                TailwindCSS frameworks. I'm also well-versed in user experience
+                design principles and usability testing, which allows me to
+                create websites that are both visually appealing and easy to
+                use.
+              </p>
+              <img
+                class="profile-pic"
+                src="https://avatars.githubusercontent.com/u/32563746?v=4"
+                alt="Profile picture"
+              />
+            </div>
+            <h3 class="skills-heading">Skills:</h3>
+            <ul class="skills-list">
+              <li>
+                Programming Languages: JavaScript, HTML, CSS, C/C++, Python
+              </li>
+              <li>Libraries & Frameworks: React, TailwindCSS, jQuery</li>
+              <li>
+                Tools & Platforms: Git, Netlify, Firebase, WordPress, Shopify
+              </li>
+            </ul>
+
+            <p>
+              If you're looking for a web developer who can help you take your
+              online presence to the next level, I'd be thrilled to work with
+              you. Let's create something amazing together!
+            </p>
+          </section>
+          <section id="work">
+            <h2 class="section-header">Where I've worked</h2>
+            <div class="tabs">
+              <div class="tab">
+                <button
+                  class="tablinks active top-tab"
+                  onclick="openTab(event, 'tab1')"
+                >
+                  Freelance Web Developer
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'tab2')">
+                  Data Center Technician
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'tab3')">
+                  Computer Science Tutor
+                </button>
+                <button
+                  class="tablinks bottom-tab"
+                  onclick="openTab(event, 'tab4')"
+                >
+                  Computer Lab Assistant
+                </button>
+              </div>
+
+              <div class="contents">
+                <div id="tab1" class="tabcontent active">
+                  <h3>Freelance Web Developer</h3>
+                  <h4>JANUARY 2023 - Present</h4>
+                  <ul>
+                    <li>
+                      Development of websites and web applications using
+                      languages such as HTML, CSS, and JavaScript.
+                    </li>
+                    <li>
+                      Work with responsive design and cross-browser
+                      compatibility.
+                    </li>
+                    <li>
+                      Work with user experience (UX) design principles and
+                      usability testing.
+                    </li>
+                    <li>
+                      Collaboration with clients to understand their needs and
+                      goals, and deliver solutions that meet their requirements.
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab2" class="tabcontent">
+                  <h3>Data Center Technician</h3>
+                  <h4>OCTOBER 2021 - NOVEMBER 2022</h4>
+                  <ul>
+                    <li>
+                      Installed, configured, and maintained data center
+                      equipment such as servers, switches, and storage systems.
+                    </li>
+                    <li>
+                      Performed regular maintenance tasks to ensure optimal
+                      performance and availability of systems.
+                    </li>
+                    <li>
+                      Troubleshot and resolved hardware and software issues
+                      using industry-standard tools and techniques.
+                    </li>
+                    <li>
+                      Worked with cross-functional teams to ensure data center
+                      infrastructure met business needs and service level
+                      agreements.
+                    </li>
+                    <li>
+                      Participated in disaster recovery planning and testing to
+                      ensure business continuity in the event of an outage.
+                    </li>
+                    <li>
+                      Provided exceptional customer service to clients by
+                      answering technical queries.
+                    </li>
+                    <li>
+                      Contributed to the development and implementation of
+                      policies and procedures to ensure compliance with industry
+                      standards and regulations.
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab3" class="tabcontent">
+                  <h3>Computer Science Tutor</h3>
+                  <h4>SEPTEMBER 2020 - MAY 2021</h4>
+                  <ul>
+                    <li>
+                      Conducted tutoring sessions and led discussions for two
+                      classes: Computer Organisation and Data Structures.
+                    </li>
+                    <li>
+                      Prepared lesson plans and provided students with
+                      additional resources such as reading materials and
+                      practice problems.
+                    </li>
+                    <li>
+                      Covered topics such as computer architecture, assembly
+                      language, memory management, input/output operations, and
+                      fundamental data structures and algorithms used in
+                      computer science.
+                    </li>
+                    <li>
+                      Helped students improve their grades and gain a deeper
+                      understanding of complex subjects.
+                    </li>
+                  </ul>
+                </div>
+                <div id="tab4" class="tabcontent">
+                  <h3>Computer Lab Assistant, Los Angeles Valley College</h3>
+                  <h4>SEPTEMBER 2018 - MAY 2019</h4>
+                  <ul>
+                    <li>
+                      Provided technical assistance and support for incoming
+                      queries and issues related to computer systems, software,
+                      and hardware.
+                    </li>
+                    <li>
+                      Installed, modified, and repaired computer hardware and
+                      software.
+                    </li>
+                    <li>Run diagnostic programs to resolve problems.</li>
+                    <li>
+                      Resolved technical problems with Local Area Networks
+                      (LAN), Wide Area Networks (WAN), and other systems.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="projects">
+            <h2 class="section-header">My Works</h2>
+
+            <div class="project-image">
+              <img
+                src="/assets/jewelry.png"
+                alt="screenshot-jewelery-front-page"
+              />
+              <div class="description">
+                <p>Design | Development</p>
+                <a href="https://www.hrpawn.co">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-image">
+              <img
+                src="/assets/calc.png"
+                alt="screenshot-calculator-front-page"
+              />
+              <div class="description">
+                <p>Design | Development</p>
+                <a href="https://calculator.shantmelikyan.com">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section id="contact">
+            <div class="contact-form-container">
+              <h2 class="section-header">Contact Me</h2>
+              <form action="https://formspree.io/f/xyyaongz" method="POST">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Jane Doe"
+                  required
+                />
+                <label>
+                  Your email:
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="example@domain.com"
+                    required
+                  />
+                </label>
+                <label>
+                  Your message:
+                  <textarea
+                    placeholder="Enter your messsage"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </section>
+        </main>
+        <aside></aside>
+        <footer>
+          <div class="row">
+            <div class="links">
+              <a href="https://www.instagram.com/shaaaaant"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/shant-melikyan-2244771b3/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/ShantMelikyan"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="mailto:shantmelikyan@gmail.com"
+                ><i class="far fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="tag">
+              <p>
+                Designed and Developed by Shant Melikyan &copy;2023. All Rights
+                Reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
