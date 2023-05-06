@@ -8,10 +8,6 @@
 html {
   font-family: "Dosis", sans-serif;
   font-size: 16px;
-  overflow: hidden;
-}
-body {
-  overflow: hidden;
 }
 
 section {
@@ -27,7 +23,7 @@ h3 {
 /* ******* css outer grid  ********** */
 .outer-grid {
   display: grid;
-  height: 100vh;
+  height: 100svh;
   grid-template-rows: 70px 1fr;
   grid-template-columns: 70px 1fr;
   grid-template-areas:
@@ -356,6 +352,7 @@ textarea {
       "alias-header alias-header"
       "alias-nav alias-innergrid";
     grid-template-columns: 90px 1fr;
+    height: 100vh;
   }
   .fa-bars {
     display: none;
