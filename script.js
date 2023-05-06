@@ -4,6 +4,7 @@ function toggleNav() {
   const nav = document.querySelector("nav");
   nav.classList.toggle("hide-nav");
 }
+// smooth scroll when to the section
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
