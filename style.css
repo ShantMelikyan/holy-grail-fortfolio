@@ -55,6 +55,7 @@ nav {
 
 .inner-grid {
   overflow-y: scroll;
+  overflow: auto;
   display: grid;
   grid-area: alias-innergrid;
   background-color: rgb(237, 234, 208);
