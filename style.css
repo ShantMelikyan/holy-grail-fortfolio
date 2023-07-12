@@ -263,12 +263,15 @@ li {
   border-radius: 5px;
   box-shadow: 0px 0px 14px -4px #000000;
   margin-bottom: 20px;
+ 
 }
 
 .project-image {
+
   position: relative;
   display: inline-block;
 }
+
 
 .project-image .description {
   position: absolute;
@@ -471,6 +474,7 @@ form button[type="submit"] {
   background: rgb(31, 31, 105);
   transform: scaleY(0);
   animation: revealAnim 2000ms ease;
+  z-index: 3;
 }
 
 .page-reveal .element-2 {
@@ -478,12 +482,14 @@ form button[type="submit"] {
   transform: scaleY(0);
   animation: revealAnim 1000ms ease;
   animation-delay: 900ms;
+  z-index: 3;
 }
 
 .page-reveal .element-3 {
   background: rgb(184, 6, 6);
   animation: revealContentAnim forwards;
   animation-delay: 1000ms;
+  z-index: 3;
 }
 
 @keyframes revealAnim {
