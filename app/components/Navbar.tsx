@@ -50,22 +50,23 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-2">
           <ThemeSwitcher />
-          <IconButton
-            size="medium"
-            edge="start"
-            aria-label="menu"
-            className="md:hidden"
-            onClick={handleNav}
-          >
-            <MenuIcon style={{ color: "#2d2d2d" }} />
-          </IconButton>
+          <div className="md:hidden">
+            <IconButton
+              size="medium"
+              edge="start"
+              aria-label="menu"
+              onClick={handleNav}
+            >
+              <MenuIcon style={{ color: "#2d2d2d" }} />
+            </IconButton>
+          </div>
         </div>
 
         <div
           className={
             nav
-            ?  "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-500 ease opacity-100 visible"
-            : "md:hidden fixed left-0 top-0 h-screen transition-all duration-500 ease opacity-0 invisible"
+              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-500 ease opacity-100 visible"
+              : "md:hidden fixed left-0 top-0 h-screen transition-all duration-500 ease opacity-0 invisible"
           }
         >
           <div
@@ -75,29 +76,27 @@ const Navbar = () => {
                 : "fixed h-full left-[-100%] top-0 p-10 ease duration-500"
             }
           >
-          
-              <div className="flex w-full items-center justify-between">
-                <Image
-                  src={logo}
-                  alt="logo"
-                  width={40}
-                  height={40}
-                  priority={true}
-                ></Image>
-                <IconButton
-                  onClick={handleNav}
-                  size="medium"
-                  edge="start"
-                  aria-label="close menu"
-                  className="shadow-lg"
-                >
-                  <CloseIcon style={{ color: "#2d2d2d" }} />
-                </IconButton>
-              </div>
-              <div className="border-b my-4 border-[#362D32] text-[#362D32]">
-                <p>Let&#39;s build things!</p>
-              </div>
-         
+            <div className="flex w-full items-center justify-between">
+              <Image
+                src={logo}
+                alt="logo"
+                width={40}
+                height={40}
+                priority={true}
+              ></Image>
+              <IconButton
+                onClick={handleNav}
+                size="medium"
+                edge="start"
+                aria-label="close menu"
+                className="shadow-lg"
+              >
+                <CloseIcon style={{ color: "#2d2d2d" }} />
+              </IconButton>
+            </div>
+            <div className="border-b my-4 border-[#362D32] text-[#362D32]">
+              <p>Let&#39;s build things!</p>
+            </div>
 
             <div className="py-4 flex-col text-[#362D32] dark:text-[#E6E0C8]">
               <ul className="">
