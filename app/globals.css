@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply tracking-wide;
+  }
+  h1, h2, h3 {
+    @apply font-bold
+  }
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl
+  }
+  h1 {
+    @apply text-3xl sm:text-4xl
+  }
+ 
+}
