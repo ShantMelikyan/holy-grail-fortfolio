@@ -1,12 +1,13 @@
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
-export default function Home() {
+export default function Main() {
   
   return (
-    <main className="dark:bg-[#362D32] bg-[#E6E0C8] h-screen">
+    <main className="dark:bg-[#362D32] bg-[#E6E0C8]">
       
       <Navbar />
-     <h1>hello</h1>
+      <Home />
     </main>
   )
 }

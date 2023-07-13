@@ -22,7 +22,7 @@ const Navbar = () => {
   };
   return (
     <div className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16  w-full shadow-xl">
-      <div className="flex items-center w-full h-full justify-between gap-2 px-4 md:px-6 lg:px-20">
+      <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 z-[100]">
         <Image src={logo} alt="logo" height={40} priority={true}></Image>
         <div>
           <ul className="hidden md:flex ">
@@ -48,15 +48,10 @@ const Navbar = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center">
           <ThemeSwitcher />
           <div className="md:hidden">
-            <IconButton
-              size="medium"
-              edge="start"
-              aria-label="menu"
-              onClick={handleNav}
-            >
+            <IconButton size="medium" aria-label="menu" onClick={handleNav}>
               <MenuIcon style={{ color: "#2d2d2d" }} />
             </IconButton>
           </div>
@@ -65,7 +60,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-500 ease opacity-100 visible"
+              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-500 ease opacity-100 visible z-50"
               : "md:hidden fixed left-0 top-0 h-screen transition-all duration-500 ease opacity-0 invisible"
           }
         >
@@ -87,7 +82,6 @@ const Navbar = () => {
               <IconButton
                 onClick={handleNav}
                 size="medium"
-                edge="start"
                 aria-label="close menu"
                 className="shadow-lg"
               >
@@ -98,7 +92,7 @@ const Navbar = () => {
               <p>Let&#39;s build things!</p>
             </div>
 
-            <div className="py-4 flex-col text-[#362D32] dark:text-[#E6E0C8]">
+            <div className="py-4 flex-col">
               <ul className="">
                 <Link href="/">
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8] ">
@@ -122,7 +116,7 @@ const Navbar = () => {
                 </Link>
               </ul>
               <div className="pt-40 uppercase tracking-widest">
-                <p>Let&#39;s connect</p>
+                <p>Connect with me</p>
                 <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">
                   <IconButton
                     size="large"
@@ -137,7 +131,6 @@ const Navbar = () => {
 
                   <IconButton
                     size="large"
-                    edge="start"
                     className="shadow-lg"
                     aria-label="github"
                     href="https://github.com/shantmelikyan"
@@ -148,7 +141,6 @@ const Navbar = () => {
 
                   <IconButton
                     size="large"
-                    edge="start"
                     className="shadow-lg"
                     aria-label="email"
                     href={"mailto:shantmelikyan@gmail.com"}
@@ -159,7 +151,6 @@ const Navbar = () => {
 
                   <IconButton
                     size="large"
-                    edge="start"
                     className="shadow-lg"
                     aria-label="instagram"
                     href={"https://instagram.com/shant.photo"}

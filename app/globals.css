@@ -5,9 +5,14 @@
 @layer base {
   body {
     @apply tracking-wide;
+    @apply dark:text-[#E6E0C8];
+    @apply text-[#362D32]
   }
-  h1, h2, h3 {
+  h1, h3 {
     @apply font-bold
+  }
+  h2 {
+    @apply font-semibold
   }
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl
