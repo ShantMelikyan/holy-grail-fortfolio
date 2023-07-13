@@ -95,7 +95,7 @@ const Navbar = () => {
                 </IconButton>
               </div>
               <div className="border-b my-4 border-[#362D32] text-[#362D32]">
-                <p>Let's build things!</p>
+                <p>Let&#39;s build things!</p>
               </div>
          
 
@@ -123,7 +123,7 @@ const Navbar = () => {
                 </Link>
               </ul>
               <div className="pt-40 uppercase tracking-widest">
-                <p>Let's connect</p>
+                <p>Let&#39;s connect</p>
                 <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">
                   <IconButton
                     size="large"
