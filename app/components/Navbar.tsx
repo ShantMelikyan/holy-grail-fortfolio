@@ -65,15 +65,15 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-500 ease opacity-100 visible z-50"
-              : "md:hidden fixed left-0 top-0 h-screen transition-all duration-500 ease opacity-0 invisible"
+              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-300 ease opacity-100 visible z-50"
+              : "md:hidden fixed left-0 top-0 h-screen transition-all duration-300 ease opacity-0 invisible"
           }
         >
           <div
             className={
               nav
-                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#BC8848] dark:bg-[#645D65] p-10 ease-in duration-500"
-                : "fixed h-full left-[-100%] top-0 p-10 ease duration-500"
+                ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#BC8848] dark:bg-[#645D65] p-10 ease-in duration-300"
+                : "fixed h-full left-[-100%] top-0 p-10 ease duration-300"
             }
           >
             <div className="flex w-full items-center justify-between">

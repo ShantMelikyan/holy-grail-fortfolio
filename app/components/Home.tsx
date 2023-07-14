@@ -19,7 +19,7 @@ const Home = () => {
           </p>
           <div className="flex justify-center items-center my-4 w-full [&>*]:m-2">
             <a
-              className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
+              className="shadow-lg dark:bg-[#675f689c] bg-[#ece6cb] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/shant-melikyan/"
               target="_blank"
@@ -28,7 +28,7 @@ const Home = () => {
             </a>
 
             <a
-             className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
+             className="shadow-lg dark:bg-[#675f689c] bg-[#ece6cb] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
               aria-label="GitHub"
               href="https://github.com/shantmelikyan"
               target="_blank"
@@ -37,7 +37,7 @@ const Home = () => {
             </a>
 
             <a
-            className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
+            className="shadow-lg dark:bg-[#675f689c] bg-[#ece6cb] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
               aria-label="Email"
               href="mailto:shantmelikyan@gmail.com"
               target="_blank"
@@ -46,7 +46,7 @@ const Home = () => {
             </a>
 
             <a
-              className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
+              className="shadow-lg dark:bg-[#675f689c] bg-[#ece6cb] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#cfcab5e1]"
               aria-label="Instagram"
               href="https://instagram.com/shant.photo"
               target="_blank"
