@@ -14,7 +14,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import {FaLinkedin, FaGithub, FaRegEnvelope , FaInstagram} from "react-icons/fa"
 
 const Navbar = () => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16  w-full shadow-xl">
       <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 z-[100]">
         <Image
-          src={theme === "light" ? logo_dark : logo_light}
+          src={resolvedTheme === "light" ? logo_dark : logo_light}
           alt="logo"
           height={50}
           width={50}
@@ -78,7 +78,7 @@ const Navbar = () => {
           >
             <div className="flex w-full items-center justify-between">
               <Image
-                src={theme === "light" ? logo_dark : logo_light}
+                src={resolvedTheme === "light" ? logo_dark : logo_light}
                 alt="logo"
                 height={50}
                 width={50}
