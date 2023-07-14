@@ -3,16 +3,15 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 import Image from "next/image";
-import logo from "../../public/images/logo_SM.png";
+import logo_dark from "../../public/images/logo_SM.png";
+import logo_light from "../../public/images/bright_logo_small.png";
+
 import Link from "next/link";
 import ThemeSwitcher from "../ThemeSwitcher";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import EmailIcon from "@mui/icons-material/Email";
+import {FaLinkedin, FaGithub, FaRegEnvelope , FaInstagram} from "react-icons/fa"
 
 const Navbar = () => {
   const { theme } = useTheme();
@@ -23,7 +22,13 @@ const Navbar = () => {
   return (
     <div className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16  w-full shadow-xl">
       <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 z-[100]">
-        <Image src={logo} alt="logo" height={40} priority={true}></Image>
+        <Image
+          src={theme === "light" ? logo_dark : logo_light}
+          alt="logo"
+          height={50}
+          width={50}
+          priority={true}
+        />
         <div>
           <ul className="hidden md:flex ">
             <Link href="/">
@@ -51,8 +56,8 @@ const Navbar = () => {
         <div className="flex items-center">
           <ThemeSwitcher />
           <div className="md:hidden">
-            <IconButton size="medium" aria-label="menu" onClick={handleNav}>
-              <MenuIcon style={{ color: "#2d2d2d" }} />
+            <IconButton size="medium" aria-label="menu" onClick={handleNav} className="text-[#362D32] dark:text-[#E6E0C8] hover:bg-black/10">
+              <MenuIcon />
             </IconButton>
           </div>
         </div>
@@ -73,22 +78,22 @@ const Navbar = () => {
           >
             <div className="flex w-full items-center justify-between">
               <Image
-                src={logo}
+                src={theme === "light" ? logo_dark : logo_light}
                 alt="logo"
-                width={40}
-                height={40}
+                height={50}
+                width={50}
                 priority={true}
-              ></Image>
+              />
               <IconButton
                 onClick={handleNav}
-                size="medium"
+                size="large"
                 aria-label="close menu"
-                className="shadow-lg"
+                className="shadow-lg text-[#362D32] dark:text-[#E6E0C8] hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
               >
-                <CloseIcon style={{ color: "#2d2d2d" }} />
+                <CloseIcon className=""  />
               </IconButton>
             </div>
-            <div className="border-b my-4 border-[#362D32] text-[#362D32]">
+            <div className="border-b my-4 pb-2 dark:border-[#E6E0C8] border-[#362D32]">
               <p>Let&#39;s build things!</p>
             </div>
 
@@ -118,46 +123,41 @@ const Navbar = () => {
               <div className="pt-40 uppercase tracking-widest">
                 <p>Connect with me</p>
                 <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">
-                  <IconButton
-                    size="large"
-                    edge="start"
-                    className="shadow-lg"
-                    aria-label="LinkedIn"
-                    href="https://www.linkedin.com/in/shant-melikyan/"
-                    target="_blank"
-                  >
-                    <LinkedInIcon style={{ color: "#2d2d2d" }} />
-                  </IconButton>
+                <a
+              className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/shant-melikyan/"
+              target="_blank"
+            >
+              <FaLinkedin size={20}/>
+            </a>
 
-                  <IconButton
-                    size="large"
-                    className="shadow-lg"
-                    aria-label="github"
-                    href="https://github.com/shantmelikyan"
-                    target="_blank"
-                  >
-                    <GitHubIcon style={{ color: "#2d2d2d" }} />
-                  </IconButton>
+            <a
+             className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+              aria-label="GitHub"
+              href="https://github.com/shantmelikyan"
+              target="_blank"
+            >
+              <FaGithub  size={20}/>
+            </a>
 
-                  <IconButton
-                    size="large"
-                    className="shadow-lg"
-                    aria-label="email"
-                    href={"mailto:shantmelikyan@gmail.com"}
-                    target="_blank"
-                  >
-                    <EmailIcon style={{ color: "#2d2d2d" }} />
-                  </IconButton>
+            <a
+            className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+              aria-label="Email"
+              href="mailto:shantmelikyan@gmail.com"
+              target="_blank"
+            >
+              <FaRegEnvelope size={20}/>
+            </a>
 
-                  <IconButton
-                    size="large"
-                    className="shadow-lg"
-                    aria-label="instagram"
-                    href={"https://instagram.com/shant.photo"}
-                    target="_blank"
-                  >
-                    <InstagramIcon style={{ color: "#2d2d2d" }} />
-                  </IconButton>
+            <a
+              className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+              aria-label="Instagram"
+              href="https://instagram.com/shant.photo"
+              target="_blank"
+            >
+              <FaInstagram size={20}/>
+            </a>
                 </div>
               </div>
             </div>
