@@ -55,7 +55,7 @@ const Projects = () => {
             return (
               <div className="mx-auto grid md:grid-cols-2 mb-10" key={idx}>
                 <div className="md:pl-6 flex flex-col justify-center md:order-1 pb-4">
-                  <div className="flex flex-row items-baseline py-2 gap-4">
+                  <div className="flex flex-row items-baseline py-2 gap-3">
                     <h3 className="tracking-widest font-semibold">
                       {project.name}
                     </h3>
