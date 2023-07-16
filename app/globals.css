@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth !important;
+  }
   body {
     @apply tracking-wide;
     @apply dark:text-[#E6E0C8];

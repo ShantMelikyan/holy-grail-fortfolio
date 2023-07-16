@@ -103,17 +103,17 @@ const Navbar = () => {
                     home
                   </li>
                 </Link>
-                <Link href="#about" onClick={handleNav}>
+                <Link href="/#about" onClick={handleNav}>
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                     about
                   </li>
                 </Link>
-                <Link href="#projects" onClick={handleNav}>
+                <Link href="/#projects" onClick={handleNav}>
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                     projects
                   </li>
                 </Link>
-                <Link href="#contact" onClick={handleNav}>
+                <Link href="/#contact" onClick={handleNav}>
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                     contact
                   </li>
