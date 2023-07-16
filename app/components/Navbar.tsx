@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTheme } from "next-themes";
 
 import Image from "next/image";
@@ -20,14 +20,13 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16  w-full shadow-xl">
+    <nav className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16 w-full shadow-xl">
       <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 z-[100]">
         <Image
-          src={resolvedTheme === "light" ? logo_dark : logo_light}
+          src={resolvedTheme === "dark" ? logo_light : logo_dark}
           alt="logo"
           height={50}
           width={50}
-          priority={true}
         />
         <div>
           <ul className="hidden md:flex ">
@@ -36,17 +35,17 @@ const Navbar = () => {
                 home
               </li>
             </Link>
-            <Link href="/">
+            <Link href="#about">
               <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                 about
               </li>
             </Link>
-            <Link href="/">
+            <Link href="#projects">
               <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
-                skills
+                projects
               </li>
             </Link>
-            <Link href="/">
+            <Link href="#contact">
               <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                 contact
               </li>
@@ -99,22 +98,22 @@ const Navbar = () => {
 
             <div className="py-4 flex-col">
               <ul className="">
-                <Link href="/">
+                <Link href="/" onClick={handleNav}> 
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8] ">
                     home
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="#about" onClick={handleNav}>
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                     about
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="#projects" onClick={handleNav}>
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
-                    skills
+                    projects
                   </li>
                 </Link>
-                <Link href="/">
+                <Link href="#contact" onClick={handleNav}>
                   <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
                     contact
                   </li>
@@ -164,7 +163,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
