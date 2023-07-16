@@ -11,7 +11,12 @@ import ThemeSwitcher from "../ThemeSwitcher";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import {FaLinkedin, FaGithub, FaRegEnvelope , FaInstagram} from "react-icons/fa"
+import {
+  FaLinkedin,
+  FaGithub,
+  FaRegEnvelope,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Navbar = () => {
   const { resolvedTheme } = useTheme();
@@ -22,32 +27,34 @@ const Navbar = () => {
   return (
     <nav className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16 w-full shadow-xl z-[100]">
       <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 ">
-        <Image
-          src={resolvedTheme === "dark" ? logo_light : logo_dark}
-          alt="logo"
-          height={50}
-          width={50}
-          quality={100}
-        />
+        <Link href="/">
+          <Image
+            src={resolvedTheme === "dark" ? logo_light : logo_dark}
+            alt="logo"
+            height={50}
+            width={50}
+            quality={100}
+          />
+        </Link>
         <div>
           <ul className="hidden md:flex font-medium">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 home
               </li>
             </Link>
             <Link href="#about">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 about
               </li>
             </Link>
             <Link href="#projects">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 projects
               </li>
             </Link>
             <Link href="#contact">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 contact
               </li>
             </Link>
@@ -56,7 +63,12 @@ const Navbar = () => {
         <div className="flex items-center">
           <ThemeSwitcher />
           <div className="md:hidden">
-            <IconButton size="medium" aria-label="menu" onClick={handleNav} className="text-[#362D32] dark:text-[#E6E0C8] hover:bg-black/10">
+            <IconButton
+              size="medium"
+              aria-label="menu"
+              onClick={handleNav}
+              className="text-[#362D32] dark:text-[#E6E0C8] hover:bg-black/10"
+            >
               <MenuIcon />
             </IconButton>
           </div>
@@ -90,7 +102,7 @@ const Navbar = () => {
                 aria-label="close menu"
                 className="shadow-lg text-[#362D32] dark:text-[#E6E0C8] hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
               >
-                <CloseIcon className=""  />
+                <CloseIcon className="" />
               </IconButton>
             </div>
             <div className="border-b my-4 pb-2 dark:border-[#E6E0C8] border-[#362D32]">
@@ -99,23 +111,23 @@ const Navbar = () => {
 
             <div className="py-4 flex-col">
               <ul className="">
-                <Link href="/" onClick={handleNav}> 
-                  <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8] ">
+                <Link href="/" onClick={handleNav}>
+                  <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8] ">
                     home
                   </li>
                 </Link>
                 <Link href="/#about" onClick={handleNav}>
-                  <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
+                  <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8]">
                     about
                   </li>
                 </Link>
                 <Link href="/#projects" onClick={handleNav}>
-                  <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
+                  <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8]">
                     projects
                   </li>
                 </Link>
                 <Link href="/#contact" onClick={handleNav}>
-                  <li className="py-4 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
+                  <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8]">
                     contact
                   </li>
                 </Link>
@@ -123,41 +135,41 @@ const Navbar = () => {
               <div className="pt-40 uppercase tracking-widest">
                 <p>Connect with me</p>
                 <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">
-                <a
-              className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
-              aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/shant-melikyan/"
-              target="_blank"
-            >
-              <FaLinkedin size={20}/>
-            </a>
+                  <a
+                    className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                    aria-label="LinkedIn"
+                    href="https://www.linkedin.com/in/shant-melikyan/"
+                    target="_blank"
+                  >
+                    <FaLinkedin size={20} />
+                  </a>
 
-            <a
-             className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
-              aria-label="GitHub"
-              href="https://github.com/shantmelikyan"
-              target="_blank"
-            >
-              <FaGithub  size={20}/>
-            </a>
+                  <a
+                    className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                    aria-label="GitHub"
+                    href="https://github.com/shantmelikyan"
+                    target="_blank"
+                  >
+                    <FaGithub size={20} />
+                  </a>
 
-            <a
-            className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
-              aria-label="Email"
-              href="mailto:shantmelikyan@gmail.com"
-              target="_blank"
-            >
-              <FaRegEnvelope size={20}/>
-            </a>
+                  <a
+                    className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                    aria-label="Email"
+                    href="mailto:shantmelikyan@gmail.com"
+                    target="_blank"
+                  >
+                    <FaRegEnvelope size={20} />
+                  </a>
 
-            <a
-              className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
-              aria-label="Instagram"
-              href="https://instagram.com/shant.photo"
-              target="_blank"
-            >
-              <FaInstagram size={20}/>
-            </a>
+                  <a
+                    className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                    aria-label="Instagram"
+                    href="https://instagram.com/shant.photo"
+                    target="_blank"
+                  >
+                    <FaInstagram size={20} />
+                  </a>
                 </div>
               </div>
             </div>

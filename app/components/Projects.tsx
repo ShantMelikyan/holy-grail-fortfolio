@@ -98,7 +98,7 @@ const Projects = () => {
                   className="hover:blur-0 relative"
                 >
                   <Image
-                    className="shadow-xl rounded-md md:order-0 "
+                    className="shadow-xl rounded-md md:order-0 w-full"
                     src={project.image}
                     alt={`${project.name} image`}
                     width={500}

@@ -9,6 +9,11 @@ export default function Main() {
   
   return (
     <main className="dark:bg-[#292226] bg-[#E6E0C8]">
+      <div className="fixed inset-0 pointer-events-none">
+    <div className="element-3 absolute h-full w-full"></div>
+    <div className="element-1 absolute h-full w-full"></div>
+    <div className="element-2 absolute h-full w-full"></div>
+</div>
       <Navbar />
       <Home />
       <About/>

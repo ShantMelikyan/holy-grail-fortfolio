@@ -42,7 +42,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="w-full h-[75vh] p-4 py-16">
+      <div className="w-full md:h-[75vh] p-4 py-16 mb-16">
         <div className="w-full h-full max-w-3xl m-auto p-4">
           <h2 className="pb-4">Contact</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
@@ -53,7 +53,9 @@ const Contact = () => {
               name="name"
               required
               placeholder="John Doe"
-              className="p-2 mb-2 rounded-md shadow-sm dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E] outline-[#BC8848] dark:outline-[#E6E0C8]"
+              className="p-2 mb-2 rounded-md shadow-sm 
+              outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
+              dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
             />
             <label htmlFor="email">Email</label>
             <input
@@ -62,14 +64,18 @@ const Contact = () => {
               name="email"
               required
               placeholder="email@example.com"
-              className="p-2 mb-2  rounded-md shadow-sm dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E] outline-[#BC8848] dark:outline-[#E6E0C8]"
+              className="p-2 mb-2 rounded-md shadow-sm 
+              outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
+              dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
             />
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"
-              placeholder="Enter Message"
-              className="p-2 mb-4 rounded-md shadow-sm dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E] outline-[#BC8848] dark:outline-[#E6E0C8]"
+              placeholder="Enter Your Message"
+              className="p-2 mb-2 rounded-md shadow-sm 
+              outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
+              dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
             ></textarea>
 
             <button
