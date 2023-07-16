@@ -90,13 +90,25 @@ const Projects = () => {
                     ))}
                   </ul>
                 </div>
-                <Image
-                  className="shadow-xl rounded-md md:order-0"
-                  src={project.image}
-                  alt={`${project.name} image`}
-                  width={500}
-                  height={300}
-                />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Live Website Link"
+                  className="hover:blur-0 relative"
+                >
+                  <Image
+                    className="shadow-xl rounded-md md:order-0 "
+                    src={project.image}
+                    alt={`${project.name} image`}
+                    width={500}
+                    height={300}
+                    placeholder="blur"
+                  />
+                  <div className="opacity-0 rounded-md hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-[#E6E0C8] hover:bg-[#000000c0]">
+                    <FaExternalLinkAlt size={20} aria-hidden="true" />
+                  </div>
+                </a>
               </div>
             );
           })}

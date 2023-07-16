@@ -48,6 +48,7 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
             <label htmlFor="name">Name</label>
             <input
+              id="name"
               type="text"
               name="name"
               required
@@ -56,6 +57,7 @@ const Contact = () => {
             />
             <label htmlFor="email">Email</label>
             <input
+              id="email"
               type="email"
               name="email"
               required
@@ -64,6 +66,7 @@ const Contact = () => {
             />
             <label htmlFor="message">Message</label>
             <textarea
+              id="message"
               name="message"
               placeholder="Enter Message"
               className="p-2 mb-4 rounded-md shadow-sm dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E] outline-[#BC8848] dark:outline-[#E6E0C8]"

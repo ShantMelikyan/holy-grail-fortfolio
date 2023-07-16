@@ -20,33 +20,34 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <nav className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16 w-full shadow-xl">
-      <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 z-[100]">
+    <nav className="fixed bg-[#BC8848] dark:bg-[#645D65] h-16 w-full shadow-xl z-[100]">
+      <div className="flex items-center w-full h-full justify-between px-4 md:px-6 lg:px-20 ">
         <Image
           src={resolvedTheme === "dark" ? logo_light : logo_dark}
           alt="logo"
           height={50}
           width={50}
+          quality={100}
         />
         <div>
-          <ul className="hidden md:flex ">
+          <ul className="hidden md:flex font-medium">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8] ">
+              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 home
               </li>
             </Link>
             <Link href="#about">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 about
               </li>
             </Link>
             <Link href="#projects">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 projects
               </li>
             </Link>
             <Link href="#contact">
-              <li className="ml-10 text-sm uppercase dark:hover:text-[#94948E] hover:text-[#E6E0C8]">
+              <li className="ml-10 text-sm uppercase dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
                 contact
               </li>
             </Link>
@@ -65,7 +66,7 @@ const Navbar = () => {
           className={
             nav
               ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/50 transition-all duration-300 ease opacity-100 visible z-50"
-              : "md:hidden fixed left-0 top-0 h-screen transition-all duration-300 ease opacity-0 invisible"
+              : "md:hidden fixed left-0 top-0 h-screen transition-all duration-300 ease opacity-0 invisible "
           }
         >
           <div
