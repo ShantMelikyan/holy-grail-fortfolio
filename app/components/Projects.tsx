@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import todo from "../../public/images/todo.png";
-import teamvibe from "../../public/images/team-vibe.png";
+import todo from "../../public/images/todoscreen.png";
+import teamvibe from "../../public/images/teamvibe.png";
 import blog from "../../public/images/blog.png";
 import hrpawn from "../../public/images/hrpawn.png";
 
