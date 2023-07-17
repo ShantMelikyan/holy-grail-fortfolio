@@ -29,7 +29,7 @@ const ThemeSwitcher = () => {
       <IconButton
         className="flex items-center hover:bg-black/10"
         onClick={handleClick}
-        size="medium"
+        size="large"
         edge="start"
         aria-label={iconLabel}
       >

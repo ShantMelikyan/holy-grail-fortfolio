@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="w-full md:h-[75vh] p-4 py-16 mb-16">
+      <div className="w-full md:min-h-[75vh] p-4 py-16 mb-16">
         <div className="w-full h-full max-w-3xl m-auto p-4">
           <Reveal>
             <h2 className="pb-4">Contact</h2>

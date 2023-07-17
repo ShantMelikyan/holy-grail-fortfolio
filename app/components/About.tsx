@@ -83,7 +83,7 @@ const About = () => {
                     return (
                       <p
                         key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#362D32] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded-md"
                       >
                         {item.language}
                       </p>
@@ -96,7 +96,7 @@ const About = () => {
                     return (
                       <p
                         key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#362D32] bg-[#ece6cb]  shadow px-4 py-2 mr-2 mt-2 rounded"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded-md"
                       >
                         {item.library}
                       </p>
@@ -109,7 +109,7 @@ const About = () => {
                     return (
                       <p
                         key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#362D32] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded-md"
                       >
                         {item.tool}
                       </p>

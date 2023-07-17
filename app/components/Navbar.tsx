@@ -35,7 +35,7 @@ const Navbar = () => {
           ? "backdrop-blur-none backdrop-filter-none"
           : "backdrop-filter backdrop-blur-md"
       } 
-      h-16 max-w-3xl m-auto shadow-xl rounded-full
+      h-16 max-w-3xl m-auto shadow-lg rounded-full border border-[#645d6525]
     `}
       >
         <div className="flex items-center h-full justify-between px-6 mx-4 ">
@@ -76,7 +76,7 @@ const Navbar = () => {
             <ThemeSwitcher />
             <div className="md:hidden">
               <IconButton
-                size="medium"
+                size="large"
                 aria-label="menu"
                 onClick={handleNav}
                 className="text-[#362D32] dark:text-[#E6E0C8] hover:bg-black/10"
@@ -96,7 +96,7 @@ const Navbar = () => {
             <div
               className={
                 nav
-                  ? "fixed m-4 rounded-3xl left-0 top-0 w-[55%] sm:w-[40%] md:w-[25%] h-[70vh] bg-[#bc8848bb] dark:bg-[#645d65a1] p-10 ease-in duration-300"
+                  ? "fixed m-4 rounded-3xl left-0 top-0 w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] bg-[#bc8848bb] dark:bg-[#645d65a1] p-10 ease-in duration-300 border border-[#645d6525]"
                   : "fixed h-full left-[-100%] top-0 p-10 ease duration-300"
               }
             >

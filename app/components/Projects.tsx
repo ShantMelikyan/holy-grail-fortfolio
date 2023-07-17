@@ -87,7 +87,7 @@ const Projects = () => {
                       <ul className="flex flex-wrap flex-row justify-start">
                         {project.stack.map((tech, idx) => (
                           <li
-                            className="dark:bg-[#675f689c] bg-[#ece6cb] shadow-sm px-3 py-1 mr-2 mt-2 rounded-full border-[#645d653d] border"
+                            className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow-sm px-3  mr-2 mt-2 rounded-full outline-none border-gray-500/50 border"
                             key={idx}
                           >
                             {tech}
