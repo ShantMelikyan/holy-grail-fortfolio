@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -5,6 +6,7 @@ import todo from "../../public/images/todoscreen.png";
 import teamvibe from "../../public/images/teamvibe.png";
 import blog from "../../public/images/blog.png";
 import hrpawn from "../../public/images/hrpawn.png";
+import { Reveal } from "./utils/Reveal";
 
 const projects = [
   {
@@ -50,68 +52,74 @@ const Projects = () => {
     <section id="projects">
       <div className="w-full h-full p-4">
         <div className="max-w-3xl px-4 py-16 mx-auto">
-          <h2 className="pb-4">Projects</h2>
-          {projects.map((project, idx) => {
-            return (
-              <div className="mx-auto grid md:grid-cols-2 mb-10" key={idx}>
-                <div className="md:pl-6 flex flex-col justify-center md:order-1 pb-4">
-                  <div className="flex flex-row items-baseline py-2 gap-3">
-                    <h3 className="tracking-widest font-semibold">
-                      {project.name}
-                    </h3>
-                    {project.github !== "" && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub Link"
-                      >
-                        <FaGithub size={16} aria-hidden="true" />
-                      </a>
-                    )}
+          <Reveal>
+            <h2 className="pb-4">Projects</h2>
+          </Reveal>
+          <Reveal>
+            <div>
+              {projects.map((project, idx) => {
+                return (
+                  <div className="mx-auto grid md:grid-cols-2 mb-10" key={idx}>
+                    <div className="md:pl-6 flex flex-col justify-center md:order-1 pb-4">
+                      <div className="flex flex-row items-baseline py-2 gap-3">
+                        <h3 className="tracking-widest font-semibold">
+                          {project.name}
+                        </h3>
+                        {project.github !== "" && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub Link"
+                          >
+                            <FaGithub size={16} aria-hidden="true" />
+                          </a>
+                        )}
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Live Website Link"
+                        >
+                          <FaExternalLinkAlt size={15} aria-hidden="true" />
+                        </a>
+                      </div>
+                      <p className="tracking-wide">{project.description}</p>
+                      <ul className="flex flex-wrap flex-row justify-start">
+                        {project.stack.map((tech, idx) => (
+                          <li
+                            className="dark:bg-[#675f689c] bg-[#ece6cb] shadow-sm px-3 py-1 mr-2 mt-2 rounded-full border-[#645d653d] border"
+                            key={idx}
+                          >
+                            {tech}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Live Website Link"
+                      className="hover:blur-0 relative"
                     >
-                      <FaExternalLinkAlt size={15} aria-hidden="true" />
+                      <Image
+                        className="shadow-xl rounded-md md:order-0 w-full"
+                        src={project.image}
+                        alt={`${project.name} image`}
+                        width={500}
+                        height={300}
+                        placeholder="blur"
+                      />
+                      <div className="opacity-0 rounded-md hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-[#E6E0C8] hover:bg-[#000000c0]">
+                        <FaExternalLinkAlt size={20} aria-hidden="true" />
+                      </div>
                     </a>
                   </div>
-                  <p className="tracking-wide">{project.description}</p>
-                  <ul className="flex flex-wrap flex-row justify-start">
-                    {project.stack.map((tech, idx) => (
-                      <li
-                        className="dark:bg-[#675f689c] bg-[#ece6cb] shadow-sm px-3 py-1 mr-2 mt-2 rounded-full border-[#645d653d] border"
-                        key={idx}
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Live Website Link"
-                  className="hover:blur-0 relative"
-                >
-                  <Image
-                    className="shadow-xl rounded-md md:order-0 w-full"
-                    src={project.image}
-                    alt={`${project.name} image`}
-                    width={500}
-                    height={300}
-                    placeholder="blur"
-                  />
-                  <div className="opacity-0 rounded-md hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-[#E6E0C8] hover:bg-[#000000c0]">
-                    <FaExternalLinkAlt size={20} aria-hidden="true" />
-                  </div>
-                </a>
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

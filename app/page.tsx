@@ -6,15 +6,14 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
 export default function Main() {
-  
   return (
     <main className="dark:bg-[#292226] bg-[#E6E0C8]">
       <Navbar />
       <Home />
-      <About/>
+      <About />
       <Projects />
-      <Contact/>
+      <Contact />
       <Footer />
     </main>
-  )
+  );
 }

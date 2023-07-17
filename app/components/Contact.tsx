@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Reveal } from "./utils/Reveal";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -44,56 +45,73 @@ const Contact = () => {
     <section id="contact">
       <div className="w-full md:h-[75vh] p-4 py-16 mb-16">
         <div className="w-full h-full max-w-3xl m-auto p-4">
-          <h2 className="pb-4">Contact</h2>
+          <Reveal>
+            <h2 className="pb-4">Contact</h2>
+          </Reveal>
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-            <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              type="text"
-              name="name"
-              required
-              placeholder="John Doe"
-              className="p-2 mb-2 rounded-md shadow-sm 
-              outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
-              dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
-            />
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              required
-              placeholder="email@example.com"
-              className="p-2 mb-2 rounded-md shadow-sm 
-              outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
-              dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
-            />
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter Your Message"
-              className="p-2 mb-2 rounded-md shadow-sm 
-              outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
-              dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
-            ></textarea>
+            <Reveal>
+              <div className="flex flex-col mb-2 gap-1">
+                <label htmlFor="name">Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="John Doe"
+                  className="p-2 rounded-md shadow-sm
+                outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
+                dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
+                />
+              </div>
+            </Reveal>
+            <Reveal>
+              <div className="flex flex-col mb-2 gap-1">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="email@example.com"
+                  className="p-2 rounded-md shadow-sm
+                  outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
+                  dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
+                />
+              </div>
+            </Reveal>
 
-            <button
-              type="submit"
-              className={`rounded-md p-2 shadow-md ${
-                isSubmitted
-                  ? "bg-green-900 text-[#E6E0C8]"
+            <Reveal>
+              <div className="flex flex-col mb-2 gap-1">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Enter Your Message"
+                  className="p-2 rounded-md shadow-sm
+                  outline outline-0 focus:outline-1 outline-[#BC8848] dark:outline-[#E6E0C8]
+                  dark:bg-[#7d757e] bg-[#cfcab5e1] dark:placeholder-[#e6e0c89c] placeholder-[#94948E]"
+                ></textarea>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <button
+                type="submit"
+                className={`rounded-md p-2 shadow-md w-full mt-2 ${
+                  isSubmitted
+                    ? "bg-green-900 text-[#E6E0C8]"
+                    : isError
+                    ? "bg-red-900 text-[#E6E0C8]"
+                    : "dark:bg-[#645D65] bg-[#dba96b]"
+                }`}
+              >
+                {isSubmitted
+                  ? "Message Sent!"
                   : isError
-                  ? "bg-red-900 text-[#E6E0C8]"
-                  : "dark:bg-[#645D65] bg-[#dba96b]"
-              }`}
-            >
-              {isSubmitted
-                ? "Message Sent!"
-                : isError
-                ? "Couldn't Send Message"
-                : "Submit"}
-            </button>
+                  ? "Couldn't Send Message"
+                  : "Submit"}
+              </button>
+            </Reveal>
           </form>
         </div>
       </div>

@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   keywords: ["Software Developer", "Web Developer"],
   authors: [{ name: "Shant", url: "https://shantmelikyan.com/" }],
   creator: "Shant",
+  metadataBase: new URL('https://shantmelikyan.com'),
   alternates: {
     canonical: "https://shantmelikyan.com/",
   },
