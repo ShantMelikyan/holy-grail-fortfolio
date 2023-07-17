@@ -28,17 +28,17 @@ const Navbar = () => {
     <nav className="fixed w-full z-[100] p-4">
       <div
         className={`
-      dark:bg-[#645d65a1] 
+      dark:bg-[#645d65a1] h-16 max-w-3xl m-auto shadow-lg rounded-full border border-[#645d6525] 
       ${
         // need to remove backdrop filter because chrome does not support two blurs. only one at a time.
         nav
           ? "backdrop-blur-none backdrop-filter-none"
           : "backdrop-filter backdrop-blur-md"
       } 
-      h-16 max-w-3xl m-auto shadow-lg rounded-full border border-[#645d6525]
+     
     `}
       >
-        <div className="flex items-center h-full justify-between px-6 mx-4 ">
+        <div className="flex items-center h-full justify-between px-10 ">
           <Link href="/" className="shrink-0">
             <Image
               src={resolvedTheme === "dark" ? logo_light : logo_dark}
@@ -46,27 +46,28 @@ const Navbar = () => {
               height={50}
               width={50}
               quality={100}
+              priority={true}
             />
           </Link>
           <div>
             <ul className="hidden md:flex font-medium gap-8">
               <Link href="/">
-                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
+                <li className=" text-sm uppercase link link-underline  hover:text-[#94948E]">
                   home
                 </li>
               </Link>
               <Link href="#about">
-                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
+                <li className=" text-sm uppercase link link-underline hover:text-[#94948E]">
                   about
                 </li>
               </Link>
               <Link href="#projects">
-                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
+                <li className=" text-sm uppercase link link-underline  hover:text-[#94948E]">
                   projects
                 </li>
               </Link>
               <Link href="#contact">
-                <li className="text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
+                <li className="text-sm uppercase link link-underline  hover:text-[#94948E]">
                   contact
                 </li>
               </Link>
@@ -87,34 +88,38 @@ const Navbar = () => {
           </div>
 
           <div
-            className={
-              nav
-                ? "md:hidden fixed left-0 top-0 w-full h-screen backdrop-filter backdrop-blur-md transition-all duration-300 ease visible"
-                : "md:hidden fixed left-0 top-0 h-screen transition-all duration-300 ease opacity-0 invisible "
-            }
+            className={`
+            md:hidden fixed left-0 top-0 transition duration-500 ease w-full
+              ${
+                nav
+                  ? "min-h-screen backdrop-filter backdrop-blur-md visible"
+                  : "backdrop-filter-none backdrop-blur-none delay-75 invisible"
+              }
+            `}
           >
             <div
-              className={
-                nav
-                  ? "fixed m-4 rounded-3xl left-0 top-0 w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] bg-[#bc8848bb] dark:bg-[#645d65a1] p-10 ease-in duration-300 border border-[#645d6525]"
-                  : "fixed h-full left-[-100%] top-0 p-10 ease duration-300"
-              }
+              className={`fixed w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] p-10 ease rounded-3xl m-4 bg-[#bc8848bb] dark:bg-[#645d65a1] duration-300 border border-[#645d6525]
+                ${nav ? "left-0" : "left-[-100%] delay-75"}
+              `}
             >
               <div className="flex w-full items-center justify-between">
-                <Image
-                  src={resolvedTheme === "light" ? logo_dark : logo_light}
-                  alt="logo"
-                  height={50}
-                  width={50}
-                  priority={true}
-                />
+                <Link href="/" className="shrink-0" onClick={handleNav}>
+                  <Image
+                    src={resolvedTheme === "dark" ? logo_light : logo_dark}
+                    alt="logo"
+                    height={50}
+                    width={50}
+                    quality={100}
+                    priority={true}
+                  />
+                </Link>
                 <IconButton
                   onClick={handleNav}
                   size="large"
                   aria-label="close menu"
-                  className="shadow-lg text-[#362D32] dark:text-[#E6E0C8] hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                  className="shadow-lg text-[#362D32] dark:text-[#E6E0C8] hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
                 >
-                  <CloseIcon className="" />
+                  <CloseIcon />
                 </IconButton>
               </div>
               <div className="border-b my-4 pb-2 dark:border-[#E6E0C8] border-[#362D32] text-center">
@@ -149,7 +154,7 @@ const Navbar = () => {
                   <div className="flex flex-col justify-center my-4 w-full sm:w-[70%] space-y-4 ">
                     <div className="flex flex-row gap-4 justify-center">
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
                         aria-label="LinkedIn"
                         href="https://www.linkedin.com/in/shant-melikyan/"
                         target="_blank"
@@ -158,7 +163,7 @@ const Navbar = () => {
                       </a>
 
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
                         aria-label="GitHub"
                         href="https://github.com/shantmelikyan"
                         target="_blank"
@@ -166,9 +171,9 @@ const Navbar = () => {
                         <FaGithub size={20} />
                       </a>
                     </div>
-                    <div className="flex flex-row gap-4 justify-center"> 
+                    <div className="flex flex-row gap-4 justify-center">
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
                         aria-label="Email"
                         href="mailto:shantmelikyan@gmail.com"
                         target="_blank"
@@ -177,7 +182,7 @@ const Navbar = () => {
                       </a>
 
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757e] hover:bg-[#b48245]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
                         aria-label="Instagram"
                         href="https://instagram.com/shant.photo"
                         target="_blank"
