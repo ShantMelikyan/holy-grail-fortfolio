@@ -39,7 +39,7 @@ const Navbar = () => {
     `}
       >
         <div className="flex items-center h-full justify-between px-6 mx-4 ">
-          <Link href="/">
+          <Link href="/" className="shrink-0">
             <Image
               src={resolvedTheme === "dark" ? logo_light : logo_dark}
               alt="logo"
@@ -51,22 +51,22 @@ const Navbar = () => {
           <div>
             <ul className="hidden md:flex font-medium gap-8">
               <Link href="/">
-                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
                   home
                 </li>
               </Link>
               <Link href="#about">
-                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
                   about
                 </li>
               </Link>
               <Link href="#projects">
-                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+                <li className=" text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
                   projects
                 </li>
               </Link>
               <Link href="#contact">
-                <li className="text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#E6E0C8]">
+                <li className="text-sm uppercase link link-underline dark:hover:text-[#ffffff] hover:text-[#94948E]">
                   contact
                 </li>
               </Link>
