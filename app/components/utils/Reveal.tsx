@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useInView, useAnimation, useScroll} from "framer-motion";
 
 interface Props {
   children: JSX.Element;
@@ -17,7 +17,7 @@ export const Reveal = ({ children }: Props) => {
   }, [isinView]);
 
   return (
-    <div ref={ref} className="relative ">
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 100 },

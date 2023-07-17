@@ -1,4 +1,3 @@
-
 import React from "react";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -55,11 +54,11 @@ const Projects = () => {
           <Reveal>
             <h2 className="pb-4">Projects</h2>
           </Reveal>
-          <Reveal>
-            <div>
-              {projects.map((project, idx) => {
-                return (
-                  <div className="mx-auto grid md:grid-cols-2 mb-10" key={idx}>
+          {projects.map((project, idx) => {
+            return (
+              <div key={idx}>
+                <Reveal>
+                  <div className="mx-auto grid md:grid-cols-2 mb-10">
                     <div className="md:pl-6 flex flex-col justify-center md:order-1 pb-4">
                       <div className="flex flex-row items-baseline py-2 gap-3">
                         <h3 className="tracking-widest font-semibold">
@@ -116,10 +115,10 @@ const Projects = () => {
                       </div>
                     </a>
                   </div>
-                );
-              })}
-            </div>
-          </Reveal>
+                </Reveal>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
