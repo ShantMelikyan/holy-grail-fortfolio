@@ -30,7 +30,7 @@ const tools = [
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="about" className="pt-4">
       <div className="w-full md:h-screen p-4 flex-col items-center py-16">
         <div className="max-w-3xl m-auto md:grid grid-cols-3 gap-8">
           <div className="col-span-2 p-4">
@@ -83,7 +83,7 @@ const About = () => {
                     return (
                       <p
                         key={idx}
-                        className="dark:bg-[#675f689c] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#362D32] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
                       >
                         {item.language}
                       </p>
@@ -96,7 +96,7 @@ const About = () => {
                     return (
                       <p
                         key={idx}
-                        className="dark:bg-[#675f689c] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#362D32] bg-[#ece6cb]  shadow px-4 py-2 mr-2 mt-2 rounded"
                       >
                         {item.library}
                       </p>
@@ -109,7 +109,7 @@ const About = () => {
                     return (
                       <p
                         key={idx}
-                        className="dark:bg-[#675f689c] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#362D32] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded"
                       >
                         {item.tool}
                       </p>
