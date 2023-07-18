@@ -22,16 +22,9 @@ const Navbar = () => {
   const { resolvedTheme } = useTheme();
   const [nav, setNav] = useState(false);
   const [border, setBorder] = useState(false);
-  
+
   const handleNav = () => {
     setNav(!nav);
-    if(!nav) {
-      // When navigation is about to be opened
-      document.body.style.overflow = 'hidden';
-    } else {
-      // When navigation is about to be closed
-      document.body.style.overflow = 'auto';
-    }
   };
 
   useEffect(() => {
@@ -40,6 +33,13 @@ const Navbar = () => {
         setBorder(true);
       } else setBorder(false);
     };
+
+    const handleNaigation = () => {
+      if (!nav) {
+        setNav(false);
+      }
+    };
+    window.addEventListener("scroll", handleNaigation);
     window.addEventListener("scroll", handleBorder);
   }, []);
 
@@ -49,15 +49,13 @@ const Navbar = () => {
         className={`
           h-16  m-auto transition-colors duration-300 ease-in border-b backdrop-filter
           ${
-            border 
+            border
               ? "dark:bg-[#645d65a1] shadow-lg border-[#645d6525] bg-[#d8d3bc63]"
               : "bg-transparent border-transparent"
           } 
           ${
             // need to remove backdrop filter because chrome does not support two blurs. only one at a time.
-            nav
-              ? "backdrop-filter-none "
-              : "backdrop-blur-md"
+            nav ? "backdrop-filter-none " : "backdrop-blur-md"
           }
         `}
       >
