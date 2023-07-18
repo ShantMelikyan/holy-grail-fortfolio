@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 import Image from "next/image";
@@ -21,24 +21,40 @@ import {
 const Navbar = () => {
   const { resolvedTheme } = useTheme();
   const [nav, setNav] = useState(false);
+  const [border, setBorder] = useState(false);
+  
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    const handleBorder = () => {
+      if (window.scrollY > 64) {
+        setBorder(true);
+      } else setBorder(false);
+    };
+    window.addEventListener("scroll", handleBorder);
+  }, []);
+
   return (
-    <nav className="fixed w-full z-[100] p-4">
+    <nav className="fixed w-full z-[100]">
       <div
         className={`
-      dark:bg-[#645d65a1] h-16 max-w-3xl m-auto shadow-lg rounded-full border border-[#645d6525] 
-      ${
-        // need to remove backdrop filter because chrome does not support two blurs. only one at a time.
-        nav
-          ? "backdrop-blur-none backdrop-filter-none"
-          : "backdrop-filter backdrop-blur-md"
-      } 
-     
-    `}
+          h-16  m-auto transition-colors duration-300 ease-in border-b backdrop-filter
+          ${
+            border 
+              ? "dark:bg-[#645d65a1] shadow-lg border-[#645d6525] bg-[#d8d3bc63]"
+              : "bg-transparent border-transparent"
+          } 
+          ${
+            // need to remove backdrop filter because chrome does not support two blurs. only one at a time.
+            nav
+              ? "backdrop-filter-none "
+              : "backdrop-blur-md"
+          }
+        `}
       >
-        <div className="flex items-center h-full justify-between px-10 ">
+        <div className="flex items-center h-full justify-between px-6 max-w-3xl m-auto">
           <Link href="/" className="shrink-0">
             <Image
               src={resolvedTheme === "dark" ? logo_light : logo_dark}
@@ -93,13 +109,13 @@ const Navbar = () => {
               ${
                 nav
                   ? "min-h-screen backdrop-filter backdrop-blur-md visible"
-                  : "backdrop-filter-none backdrop-blur-none delay-75 invisible"
+                  : "backdrop-filter-none backdrop-blur-none invisible"
               }
             `}
           >
             <div
-              className={`fixed w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] p-10 ease rounded-3xl m-4 bg-[#bc8848bb] dark:bg-[#645d65a1] duration-300 border border-[#645d6525]
-                ${nav ? "left-0" : "left-[-100%] delay-75"}
+              className={`fixed w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] p-10 ease rounded-xl m-4 bg-[#d8d3bc63] dark:bg-[#645d65a1] duration-300 border border-[#645d651a]
+                ${nav ? "left-0" : "left-[-100%]"}
               `}
             >
               <div className="flex w-full items-center justify-between">

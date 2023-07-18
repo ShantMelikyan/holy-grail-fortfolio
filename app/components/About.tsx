@@ -30,7 +30,7 @@ const tools = [
 
 const About = () => {
   return (
-    <section id="about" className="pt-4">
+    <section id="about" className="scroll-mt-4">
       <div className="w-full md:h-screen p-4 flex-col items-center py-16">
         <div className="max-w-3xl m-auto md:grid grid-cols-3 gap-8">
           <div className="col-span-2 p-4">
