@@ -25,6 +25,13 @@ const Navbar = () => {
   
   const handleNav = () => {
     setNav(!nav);
+    if(!nav) {
+      // When navigation is about to be opened
+      document.body.style.overflow = 'hidden';
+    } else {
+      // When navigation is about to be closed
+      document.body.style.overflow = 'auto';
+    }
   };
 
   useEffect(() => {
@@ -114,7 +121,7 @@ const Navbar = () => {
             `}
           >
             <div
-              className={`fixed w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] p-10 ease rounded-xl m-4 bg-[#d8d3bc63] dark:bg-[#645d65a1] duration-300 border border-[#645d651a]
+              className={`fixed w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] p-10 ease rounded-xl m-4 bg-[#d8d3bc81] dark:bg-[#645d65a1] duration-300 border border-[#645d651a]
                 ${nav ? "left-0" : "left-[-100%]"}
               `}
             >
