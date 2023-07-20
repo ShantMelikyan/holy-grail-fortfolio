@@ -34,13 +34,18 @@ const Navbar = () => {
       } else setBorder(false);
     };
 
-    const handleNaigation = () => {
+    const handleNavigation = () => {
       if (!nav) {
         setNav(false);
       }
     };
-    window.addEventListener("scroll", handleNaigation);
+    window.addEventListener("scroll", handleNavigation);
     window.addEventListener("scroll", handleBorder);
+    
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+      window.removeEventListener("scroll", handleBorder);
+    };
   }, []);
 
   return (
@@ -101,7 +106,7 @@ const Navbar = () => {
                 size="large"
                 aria-label="menu"
                 onClick={handleNav}
-                className="text-[#362D32] dark:text-[#E6E0C8] hover:bg-black/10"
+                className="text-[#362D32] dark:text-[#E6E0C8] dark:hover:bg-black/10"
               >
                 <MenuIcon />
               </IconButton>
@@ -138,7 +143,7 @@ const Navbar = () => {
                   onClick={handleNav}
                   size="large"
                   aria-label="close menu"
-                  className="shadow-lg text-[#362D32] dark:text-[#E6E0C8] hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
+                  className="shadow-lg text-[#362D32] dark:text-[#E6E0C8] hover:dark:bg-[#7d757edc] hover:bg-[#b4824536]"
                 >
                   <CloseIcon />
                 </IconButton>
@@ -150,22 +155,22 @@ const Navbar = () => {
               <div className="py-4 flex flex-col items-center text-center">
                 <ul className="">
                   <Link href="/" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8] ">
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081] ">
                       home
                     </li>
                   </Link>
                   <Link href="/#about" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8]">
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081] ">
                       about
                     </li>
                   </Link>
                   <Link href="/#projects" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8]">
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081] ">
                       projects
                     </li>
                   </Link>
                   <Link href="/#contact" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-[#d1d1d1] hover:text-[#E6E0C8]">
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081]">
                       contact
                     </li>
                   </Link>
@@ -175,7 +180,7 @@ const Navbar = () => {
                   <div className="flex flex-col justify-center my-4 w-full sm:w-[70%] space-y-4 ">
                     <div className="flex flex-row gap-4 justify-center">
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824536]"
                         aria-label="LinkedIn"
                         href="https://www.linkedin.com/in/shant-melikyan/"
                         target="_blank"
@@ -184,7 +189,7 @@ const Navbar = () => {
                       </a>
 
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824536]"
                         aria-label="GitHub"
                         href="https://github.com/shantmelikyan"
                         target="_blank"
@@ -194,7 +199,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-row gap-4 justify-center">
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824536]"
                         aria-label="Email"
                         href="mailto:shantmelikyan@gmail.com"
                         target="_blank"
@@ -203,7 +208,7 @@ const Navbar = () => {
                       </a>
 
                       <a
-                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824588]"
+                        className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824536]"
                         aria-label="Instagram"
                         href="https://instagram.com/shant.photo"
                         target="_blank"

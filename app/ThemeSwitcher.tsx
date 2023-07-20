@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
   
     return (
       <IconButton
-        className="flex items-center hover:bg-black/10"
+        className="flex items-center dark:hover:bg-black/10 "
         onClick={handleClick}
         size="large"
         edge="start"
