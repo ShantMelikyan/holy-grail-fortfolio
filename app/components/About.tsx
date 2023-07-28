@@ -75,50 +75,59 @@ const About = () => {
 
           <div className="p-4 col-span-3">
             <div>
-              <h2 className="py-4">Skills</h2>
-              <h3>Languages:</h3>
               <Reveal>
-                <div className="flex flex-wrap flex-row  justify-start pb-6">
-                  {languages.map((item, idx) => {
-                    return (
-                      <p
-                        key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
-                      >
-                        {item.language}
-                      </p>
-                    );
-                  })}
+                <div>
+                  <h2 className="py-4">Skills</h2>
+                  <h3>Languages:</h3>
+
+                  <div className="flex flex-wrap flex-row  justify-start pb-6">
+                    {languages.map((item, idx) => {
+                      return (
+                        <p
+                          key={idx}
+                          className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
+                        >
+                          {item.language}
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               </Reveal>
-              <h3>Libraries & Frameworks:</h3>
               <Reveal>
-                <div className="flex flex-wrap flex-row justify-start pb-6">
-                  {libraries.map((item, idx) => {
-                    return (
-                      <p
-                        key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
-                      >
-                        {item.library}
-                      </p>
-                    );
-                  })}
+                <div>
+                  <h3>Libraries & Frameworks:</h3>
+
+                  <div className="flex flex-wrap flex-row justify-start pb-6">
+                    {libraries.map((item, idx) => {
+                      return (
+                        <p
+                          key={idx}
+                          className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
+                        >
+                          {item.library}
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               </Reveal>
-              <h3>Tools & Platforms:</h3>
               <Reveal>
-                <div className="flex flex-wrap flex-row justify-start pb-6">
-                  {tools.map((item, idx) => {
-                    return (
-                      <p
-                        key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
-                      >
-                        {item.tool}
-                      </p>
-                    );
-                  })}
+                <div>
+                  <h3>Tools & Platforms:</h3>
+
+                  <div className="flex flex-wrap flex-row justify-start pb-6">
+                    {tools.map((item, idx) => {
+                      return (
+                        <p
+                          key={idx}
+                          className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
+                        >
+                          {item.tool}
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               </Reveal>
             </div>
