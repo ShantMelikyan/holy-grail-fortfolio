@@ -6,6 +6,7 @@ import teamvibe from "../../public/images/teamvibe.png";
 import blog from "../../public/images/blog.png";
 import hrpawn from "../../public/images/hrpawn.png";
 import { Reveal } from "./utils/Reveal";
+import photobooth from "../../public/images/photobooth.png"
 
 const projects = [
   {
@@ -36,6 +37,15 @@ const projects = [
     link: "https://hrpawn.co",
   },
   {
+    name: "360 Photo Booth",
+    description:
+      "Photo Booth rental service features a booking tool for easy event managment.",
+    stack: ["React", "Next.js", "TailwindCSS"],
+    image: photobooth,
+    github: "https://github.com/ShantMelikyan/photo-booth",
+    link: "https://la360booth.com/",
+  },
+  {
     name: "Blog",
     description:
       "My personal blog where I write articles on different computer science topics.",
@@ -44,12 +54,13 @@ const projects = [
     github: "https://github.com/ShantMelikyan/blog",
     link: "https://blog.shantmelikyan.com/",
   },
+
 ];
 
 const Projects = () => {
   return (
     <section id="projects"  className="scroll-mt-4">
-      <div className="w-full h-full p-4">
+      <div className="w-full min-h-full p-4">
         <div className="max-w-3xl px-4 py-16 mx-auto">
           <Reveal>
             <h2 className="pb-4">Projects</h2>
@@ -87,7 +98,7 @@ const Projects = () => {
                       <ul className="flex flex-wrap flex-row justify-start">
                         {project.stack.map((tech, idx) => (
                           <li
-                            className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow-sm px-3  mr-2 mt-2 rounded-full outline-none border-gray-500/50 border"
+                            className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow-md px-4 py-1  mr-2 mt-2 rounded-full"
                             key={idx}
                           >
                             {tech}

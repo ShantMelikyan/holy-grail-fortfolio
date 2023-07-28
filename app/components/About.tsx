@@ -31,7 +31,7 @@ const tools = [
 const About = () => {
   return (
     <section id="about" className="scroll-mt-4">
-      <div className="w-full md:h-screen p-4 flex-col items-center py-16">
+      <div className="w-full md:min-h-screen p-4 flex-col items-center py-16">
         <div className="max-w-3xl m-auto md:grid grid-cols-3 gap-8">
           <div className="col-span-2 p-4">
             {" "}
@@ -74,50 +74,54 @@ const About = () => {
           </Reveal>
 
           <div className="p-4 col-span-3">
-            <Reveal>
-              <div>
-                <h2 className="py-4">Skills</h2>
-                <h3>Languages:</h3>
+            <div>
+              <h2 className="py-4">Skills</h2>
+              <h3>Languages:</h3>
+              <Reveal>
                 <div className="flex flex-wrap flex-row  justify-start pb-6">
                   {languages.map((item, idx) => {
                     return (
                       <p
                         key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded-md"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
                       >
                         {item.language}
                       </p>
                     );
                   })}
                 </div>
-                <h3>Libraries & Frameworks:</h3>
+              </Reveal>
+              <h3>Libraries & Frameworks:</h3>
+              <Reveal>
                 <div className="flex flex-wrap flex-row justify-start pb-6">
                   {libraries.map((item, idx) => {
                     return (
                       <p
                         key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded-md"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
                       >
                         {item.library}
                       </p>
                     );
                   })}
                 </div>
-                <h3>Tools & Platforms:</h3>
+              </Reveal>
+              <h3>Tools & Platforms:</h3>
+              <Reveal>
                 <div className="flex flex-wrap flex-row justify-start pb-6">
                   {tools.map((item, idx) => {
                     return (
                       <p
                         key={idx}
-                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-2 mr-2 mt-2 rounded-md"
+                        className="bg-gradient-to-r dark:from-[#675f68] dark:to-[#53454d] bg-[#ece6cb] shadow px-4 py-1 mr-2 mt-2 rounded-full"
                       >
                         {item.tool}
                       </p>
                     );
                   })}
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
