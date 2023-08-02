@@ -75,7 +75,7 @@ const Projects = () => {
                         <h3 className="tracking-widest font-semibold">
                           {project.name}
                         </h3>
-                        {project.github !== "" && (
+                        {project.github && 
                           <a
                             href={project.github}
                             target="_blank"
@@ -84,7 +84,7 @@ const Projects = () => {
                           >
                             <FaGithub size={16} aria-hidden="true" />
                           </a>
-                        )}
+                        }
                         <a
                           href={project.link}
                           target="_blank"
@@ -117,8 +117,9 @@ const Projects = () => {
                         className="shadow-xl rounded-md md:order-0 w-full"
                         src={project.image}
                         alt={`${project.name} image`}
-                        // width={500}
-                        // height={300}
+                        width={500}
+                        height={300}
+                        sizes="calc(100vw - 64px)"
                         placeholder="blur"
                       />
                       <div className="opacity-0 rounded-md hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-[#E6E0C8] hover:bg-[#000000c0]">

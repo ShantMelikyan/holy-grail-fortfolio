@@ -31,10 +31,9 @@ const tools = [
 const About = () => {
   return (
     <section id="about" className="scroll-mt-4">
-      <div className="w-full md:min-h-screen p-4 flex-col items-center py-16">
-        <div className="max-w-3xl m-auto md:grid grid-cols-3 gap-8">
+      <div className="w-full min-h-full p-4">
+        <div className="max-w-3xl m-auto md:grid grid-cols-3 gap-8 py-16">
           <div className="col-span-2 p-4">
-            {" "}
             <Reveal>
               <div>
                 <h2 className="pb-4">About Me</h2>
@@ -68,6 +67,7 @@ const About = () => {
                   height={300}
                   src={profilePic}
                   alt="profilePic"
+                  sizes="(min-width: 400px) 300px, 80vw"
                 ></Image>
               </div>
             </div>
