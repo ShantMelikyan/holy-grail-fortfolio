@@ -78,22 +78,22 @@ const Navbar = () => {
           <div>
             <ul className="hidden md:flex font-medium gap-8">
               <Link href="/">
-                <li className=" text-sm uppercase link link-underline  hover:text-[#94948E]">
+                <li className=" text-sm uppercase dark:link-underline-dark  link-underline-light ">
                   home
                 </li>
               </Link>
               <Link href="#about">
-                <li className=" text-sm uppercase link link-underline hover:text-[#94948E]">
+                <li className=" text-sm uppercase dark:link-underline-dark  link-underline-light ">
                   about
                 </li>
               </Link>
               <Link href="#projects">
-                <li className=" text-sm uppercase link link-underline  hover:text-[#94948E]">
+                <li className=" text-sm uppercase dark:link-underline-dark  link-underline-light ">
                   projects
                 </li>
               </Link>
               <Link href="#contact">
-                <li className="text-sm uppercase link link-underline  hover:text-[#94948E]">
+                <li className="text-sm uppercase dark:link-underline-dark  link-underline-light ">
                   contact
                 </li>
               </Link>
