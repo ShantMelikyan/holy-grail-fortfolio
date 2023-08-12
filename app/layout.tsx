@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
   },
   icons: {
-
     apple: [
       {
         url: "../public/android-chrome-192x192.png",
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
         type: "image/png",
       },
       {
-        url: "../public/android-chrome512x512.png",
+        url: "../public/android-chrome-512x512.png",
         sizes: "512x512",
         type: "image/png",
       },
