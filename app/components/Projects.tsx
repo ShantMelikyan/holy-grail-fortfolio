@@ -6,17 +6,17 @@ import teamvibe from "../../public/images/teamvibe.png";
 import blog from "../../public/images/blog.png";
 import hrpawn from "../../public/images/hrpawn.png";
 import { Reveal } from "./utils/Reveal";
-import photobooth from "../../public/images/photobooth.png"
+import photobooth from "../../public/images/photobooth.png";
 
 const projects = [
   {
-    name: "To-Do",
+    name: "360 Photo Booth",
     description:
-      "ToDo web application to keep track of your tasks. Features include drag and drop for reordering tasks and local storage for persistent data across sessions.",
+      "Photo Booth rental service features a booking tool for easy event managment.",
     stack: ["React", "Next.js", "TailwindCSS"],
-    image: todo,
-    github: "https://github.com/ShantMelikyan/todo-next",
-    link: "https://todo.shantmelikyan.com/",
+    image: photobooth,
+    github: "https://github.com/ShantMelikyan/photo-booth",
+    link: "https://la360booth.com/",
   },
   {
     name: "Teamvibe",
@@ -37,15 +37,6 @@ const projects = [
     link: "https://hrpawn.co",
   },
   {
-    name: "360 Photo Booth",
-    description:
-      "Photo Booth rental service features a booking tool for easy event managment.",
-    stack: ["React", "Next.js", "TailwindCSS"],
-    image: photobooth,
-    github: "https://github.com/ShantMelikyan/photo-booth",
-    link: "https://la360booth.com/",
-  },
-  {
     name: "Blog",
     description:
       "My personal blog where I write articles on different computer science topics.",
@@ -54,12 +45,20 @@ const projects = [
     github: "https://github.com/ShantMelikyan/blog",
     link: "https://blog.shantmelikyan.com/",
   },
-
+  {
+    name: "To-Do",
+    description:
+      "ToDo web application to keep track of your tasks. Features include drag and drop for reordering tasks and local storage for persistent data across sessions.",
+    stack: ["React", "Next.js", "TailwindCSS"],
+    image: todo,
+    github: "https://github.com/ShantMelikyan/todo-next",
+    link: "https://todo.shantmelikyan.com/",
+  },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects"  className="scroll-mt-4">
+    <section id="projects" className="scroll-mt-4">
       <div className="w-full min-h-full p-4">
         <div className="max-w-3xl px-4 py-16 mx-auto">
           <Reveal>
@@ -75,7 +74,7 @@ const Projects = () => {
                         <h3 className="tracking-widest font-semibold">
                           {project.name}
                         </h3>
-                        {project.github && 
+                        {project.github && (
                           <a
                             href={project.github}
                             target="_blank"
@@ -84,7 +83,7 @@ const Projects = () => {
                           >
                             <FaGithub size={16} aria-hidden="true" />
                           </a>
-                        }
+                        )}
                         <a
                           href={project.link}
                           target="_blank"
