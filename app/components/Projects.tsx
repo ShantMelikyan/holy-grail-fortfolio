@@ -7,8 +7,18 @@ import blog from "../../public/images/blog.png";
 import hrpawn from "../../public/images/hrpawn.png";
 import { Reveal } from "./utils/Reveal";
 import photobooth from "../../public/images/photobooth.png";
+import aura from "@/public/images/aura.png"
 
 const projects = [
+  {
+    name: "Aura Interiors",
+    description:
+      "Designed and developed a website for an Interior Design Studio",
+    stack: ["React", "Next.js", "TailwindCSS"],
+    image: aura,
+    github: "",
+    link: "https://aura-interiors.com/",
+  },
   {
     name: "360 Photo Booth",
     description:
