@@ -14,7 +14,7 @@ const projects = [
     name: "Aura Interiors",
     description:
       "Designed and developed a website for an Interior Design Studio",
-    stack: ["React", "Next.js", "TailwindCSS"],
+    stack: ["React", "Next.js", "TailwindCSS","Framer Motion"],
     image: aura,
     github: "",
     link: "https://aura-interiors.com/",
