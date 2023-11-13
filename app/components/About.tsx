@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import profilePic from "../../public/images/profile-pic.jpg";
+import profilePic from "../../public/images/profile.jpg";
 import { Reveal } from "./utils/Reveal";
 
 const languages = [
