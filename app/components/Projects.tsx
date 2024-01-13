@@ -8,8 +8,18 @@ import hrpawn from "../../public/images/hrpawn.png";
 import { Reveal } from "./utils/Reveal";
 import photobooth from "../../public/images/photobooth.png";
 import aura from "@/public/images/aura.png"
+import biblebuddy from "@/public/images/biblebuddy.png"
 
 const projects = [
+  {
+    name: "BibleBuddy",
+    description:
+      "Developer a web application for Christians to read the bible, take notes and ask questions to the personal AI chatbot",
+    stack: ["Next.js", "TailwindCSS", "OpenAPI", "Pinecone", "MongoDB"],
+    image: biblebuddy,
+    github: "",
+    link: "https://faithbuddy.vercel.app/",
+  },
   {
     name: "Aura Interiors",
     description:
