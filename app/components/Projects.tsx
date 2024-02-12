@@ -18,7 +18,7 @@ const projects = [
     stack: ["Next.js", "TailwindCSS", "OpenAPI", "Pinecone", "MongoDB"],
     image: biblebuddy,
     github: "",
-    link: "https://faithbuddy.vercel.app/",
+    link: "https://myfaithbuddy.com",
   },
   {
     name: "Aura Interiors",
