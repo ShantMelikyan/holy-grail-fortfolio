@@ -29,21 +29,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleBorder = () => {
-      if (window.scrollY > 64) {
-        setBorder(true);
-      } else setBorder(false);
+      setBorder(window.scrollY > 64);
     };
 
-    const handleNavigation = () => {
-      if (!nav) {
-        setNav(false);
-      }
-    };
-    window.addEventListener("scroll", handleNavigation);
     window.addEventListener("scroll", handleBorder);
-    
     return () => {
-      window.removeEventListener("scroll", handleNavigation);
       window.removeEventListener("scroll", handleBorder);
     };
   }, []);
@@ -52,16 +42,13 @@ const Navbar = () => {
     <nav className="fixed w-full z-[100]">
       <div
         className={`
-          h-16  m-auto transition-colors duration-300 ease-in border-b backdrop-filter
+          h-16 m-auto transition-colors duration-300 ease-in border-b backdrop-filter
           ${
             border
               ? "dark:bg-[#645d65a1] shadow-lg border-[#645d6525] bg-[#d8d3bc63]"
               : "bg-transparent border-transparent"
-          } 
-          ${
-            // need to remove backdrop filter because chrome does not support two blurs. only one at a time.
-            nav ? "backdrop-filter-none " : "backdrop-blur-md"
           }
+          ${nav ? "backdrop-filter-none" : "backdrop-blur-md"}
         `}
       >
         <div className="flex items-center h-full justify-between px-6 max-w-3xl m-auto">
@@ -72,32 +59,34 @@ const Navbar = () => {
               height={50}
               width={50}
               quality={100}
-              priority={true}
+              priority
             />
           </Link>
-          <div>
-            <ul className="hidden md:flex font-medium gap-8">
-              <Link href="/">
-                <li className=" text-sm uppercase dark:link-underline-dark  link-underline-light ">
-                  home
-                </li>
-              </Link>
-              <Link href="#about">
-                <li className=" text-sm uppercase dark:link-underline-dark  link-underline-light ">
-                  about
-                </li>
-              </Link>
-              <Link href="#projects">
-                <li className=" text-sm uppercase dark:link-underline-dark  link-underline-light ">
-                  projects
-                </li>
-              </Link>
-              <Link href="#contact">
-                <li className="text-sm uppercase dark:link-underline-dark  link-underline-light ">
-                  contact
-                </li>
-              </Link>
-            </ul>
+          <div className="hidden md:flex font-medium gap-8">
+            <Link
+              href="/"
+              className="text-sm uppercase dark:link-underline-dark link-underline-light"
+            >
+              Home
+            </Link>
+            <Link
+              href="#about"
+              className="text-sm uppercase dark:link-underline-dark link-underline-light"
+            >
+              About
+            </Link>
+            <Link
+              href="#projects"
+              className="text-sm uppercase dark:link-underline-dark link-underline-light"
+            >
+              Projects
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm uppercase dark:link-underline-dark link-underline-light"
+            >
+              Contact
+            </Link>
           </div>
           <div className="flex items-center">
             <ThemeSwitcher />
@@ -116,12 +105,12 @@ const Navbar = () => {
           <div
             className={`
             md:hidden fixed left-0 top-0 transition duration-500 ease w-full
-              ${
-                nav
-                  ? "min-h-screen backdrop-filter backdrop-blur-md visible"
-                  : "backdrop-filter-none backdrop-blur-none invisible"
-              }
-            `}
+            ${
+              nav
+                ? "min-h-screen backdrop-filter backdrop-blur-md visible"
+                : "backdrop-filter-none backdrop-blur-none invisible"
+            }
+          `}
           >
             <div
               className={`fixed w-[55%] sm:w-[40%] md:w-[25%] min-h-[70vh] p-10 ease rounded-xl m-4 bg-[#d8d3bc81] dark:bg-[#645d65a1] duration-300 border border-[#645d651a]
@@ -136,7 +125,6 @@ const Navbar = () => {
                     height={50}
                     width={50}
                     quality={100}
-                    priority={true}
                   />
                 </Link>
                 <IconButton
@@ -153,37 +141,38 @@ const Navbar = () => {
               </div>
 
               <div className="py-4 flex flex-col items-center text-center">
-                <ul className="">
+                <ul>
                   <Link href="/" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081] ">
-                      home
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081]">
+                      Home
                     </li>
                   </Link>
                   <Link href="/#about" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081] ">
-                      about
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081]">
+                      About
                     </li>
                   </Link>
                   <Link href="/#projects" onClick={handleNav}>
-                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081] ">
-                      projects
+                    <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081]">
+                      Projects
                     </li>
                   </Link>
                   <Link href="/#contact" onClick={handleNav}>
                     <li className="py-4 text-sm uppercase dark:hover:text-white hover:text-[#949081]">
-                      contact
+                      Contact
                     </li>
                   </Link>
                 </ul>
                 <div className="pt-8 tracking-widest flex items-center flex-col">
                   <p>Connect with me</p>
-                  <div className="flex flex-col justify-center my-4 w-full sm:w-[70%] space-y-4 ">
+                  <div className="flex flex-col justify-center my-4 w-full sm:w-[70%] space-y-4">
                     <div className="flex flex-row gap-4 justify-center">
                       <a
                         className="shadow-lg dark:bg-[#675f689c] p-3 rounded-full hover:dark:bg-[#7d757edc] hover:bg-[#b4824536]"
                         aria-label="LinkedIn"
                         href="https://www.linkedin.com/in/shant-melikyan/"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <FaLinkedin size={20} />
                       </a>
@@ -193,6 +182,7 @@ const Navbar = () => {
                         aria-label="GitHub"
                         href="https://github.com/shantmelikyan"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <FaGithub size={20} />
                       </a>
@@ -203,6 +193,7 @@ const Navbar = () => {
                         aria-label="Email"
                         href="mailto:shantmelikyan@gmail.com"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <FaRegEnvelope size={20} />
                       </a>
@@ -212,6 +203,7 @@ const Navbar = () => {
                         aria-label="Instagram"
                         href="https://instagram.com/shant.photo"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <FaInstagram size={20} />
                       </a>

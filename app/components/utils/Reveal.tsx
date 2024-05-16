@@ -1,18 +1,20 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation} from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 interface Props {
   children: JSX.Element;
+  delay?: number; // Add delay as an optional prop
 }
-export const Reveal = ({ children }: Props) => {
+
+export const Reveal = ({ children, delay = 0.3 }: Props) => { // Set default delay to 0.3
   const ref = useRef(null);
   const isinView = useInView(ref, { once: true });
   const mainControls = useAnimation();
 
   useEffect(() => {
     if (isinView) {
-        mainControls.start("visible");
+      mainControls.start("visible");
     }
   }, [isinView]);
 
@@ -26,8 +28,8 @@ export const Reveal = ({ children }: Props) => {
         initial="hidden"
         animate={mainControls}
         transition={{
-          duration: 0.5,
-          delay: 0.3,
+          duration: 0.7,
+          delay: delay, // Use the delay prop here
         }}
       >
         {children}
